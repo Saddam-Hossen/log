@@ -1,4 +1,4 @@
-Here's a clean and professional GitHub `README.md` documentation for implementing structured logging in a Spring Boot application using Log4j2:
+Documentation for implementing structured logging in a Spring Boot application using Log4j2:
 
 ```markdown
 # 📘 Structured Logging in Spring Boot with Log4j2
