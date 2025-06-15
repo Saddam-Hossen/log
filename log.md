@@ -40,12 +40,22 @@ springboot-logging/
 ## ⚙️ application.properties
 
 ```properties
-# Log4j2 Configuration
-logging.level.root=INFO
-logging.level.com.example=INFO
-logging.file.name=logs/app.log
-logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
-logging.pattern.file={"instant":{"epochSecond":%d{UNIX_SECONDS},"nanoOfSecond":%d{UNIX_NANO}},"thread":"%t","level":"%p","loggerName":"%c","message":"%m","endOfBatch":false,"loggerFqcn":"%c","threadId":%tid,"threadPriority":%priority}%n
+status = warn
+name = FileJsonLogger
+
+# File appender writing JSON logs
+appender.file.type = File
+appender.file.name = JsonFileAppender
+appender.file.fileName = logs/app.log
+appender.file.layout.type = JsonLayout
+appender.file.layout.compact = true
+appender.file.layout.eventEol = true
+
+# Root logger config
+rootLogger.level = info
+rootLogger.appenderRefs = file
+rootLogger.appenderRef.file.ref = JsonFileAppender
+
 ````
 
 ---
