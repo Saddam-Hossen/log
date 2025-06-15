@@ -21,7 +21,6 @@ This project demonstrates how to configure and use **Log4j2** for structured, ce
 
 ## 🧱 Project Structure
 
-```
 
 springboot-logging/
 ├── src/
@@ -35,9 +34,8 @@ springboot-logging/
 ├── pom.xml
 └── README.md
 
-````
+```
 
----
 
 ## ⚙️ application.properties
 
